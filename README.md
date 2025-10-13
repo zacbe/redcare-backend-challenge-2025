@@ -49,6 +49,14 @@ These parameters are translated to match GitHub’s search format:
 
 > The `q` parameter is required for GitHub’s search endpoint to work.
 
+### No Pagination
+The GitHub API returns 30 repositories by default. Since the challenge requirements didn’t mention pagination, the service currently returns all available results in a single response. Pagination can be easily added later if needed, the structure of the service already supports extending query parameters
+
+### No caching mechanism
+GitHub repositories are dynamic and frequently updated, so this service always fetches fresh data on every request.  
+To keep the implementation simple, no caching layer was added. However, caching (e.g., by query parameters) could be introduced later to reduce API calls and improve performance if needed.
+
+### Request Flow
 When the endpoint is called, the app:
 	1.	Validates the query parameters.
 	2.	Requests repositories from the GitHub API.
