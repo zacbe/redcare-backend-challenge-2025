@@ -11,4 +11,4 @@ on:
       - develop
 jobs:
   test:
-    uses: zacbe/reusable-workflows/.github/workflows/nest-run-tests.yml@v1
+    uses: zacbe/reusable-workflows/.github/workflows/nest-run-tests.yml@nest-run-tests/v1.0.0
