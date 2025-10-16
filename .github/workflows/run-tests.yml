@@ -11,24 +11,4 @@ on:
       - develop
 jobs:
   test:
-    name: Run Tests
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up Node.js from .nvmrc
-        uses: actions/setup-node@v4
-        with:
-          node-version-file: ".nvmrc"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Run lint
-        run: npm run lint
-
-      - name: Run tests
-        run: npm test
+    uses: zacbe/reusable-workflows/.github/workflows/nest-run-tests.yml@v1
