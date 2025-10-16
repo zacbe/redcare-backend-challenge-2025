@@ -24,7 +24,7 @@ The `GithubClient` lives in its own module to keep API communication separate fr
 This separation makes the code easier to test, maintain, and reuse.
 
 The diagram below shows how these components interact:
-![components](/docs/component-diagram.png)
+![components](./docs/component-diagram.png)
 
 ## API Design
 
